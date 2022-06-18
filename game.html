@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <!--start of the guess word div-->
+    <div class="guessWordDivClass" id="guessWordId">
+        <h2>Guess the word</h2>
+
+    </div>
+    <!--end of the guess word div-->
+
+    <!--canvas div start-->
+
+        <canvas id="myCanvas"  >
+            Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+    <!--canvas div end-->
+
+
+    <!--start of keyboard div-->
+    <div class="keyboardDivClass" id="keyboardDivId">
+        <!--start of keyboard keys div-->
+        <div class="keyboardKeysClass" id="keyboardKeysId">
+           
+        </div>
+        <!--end of keyboard keys div-->
+    </div>
+    <!--end of keyboard div-->
+
+    <!--start of the win game modal div-->
+    <div id="myModal1" class="modal">
+
+        <!--start Modal content div-->
+        <div class="modal-content">
+            <h1>Congratulations</h1>
+            <h3>You have won the game</h3>
+            <h3>Correct Guess :</h3>
+          <h3 id="correctWord1"></h3>
+  
+            <br>
+            <br>
+          <!--home-->
+          <button class="modalButton" id="homeId1" onclick="gotoHomePage()"><h3>Home</h3></button>
+          <!--play again -->
+          <button class="modalButton" id="playAgainId2" onclick="playAgain()"><h3>Next Word</h3></button> 
+        </div>
+        <!--end Modal content div-->
+      
+    </div>
+    <!--end of the win game modal div-->
+
+    <!--start of the game over modal div-->
+    <div id="myModal2" class="modal">
+
+        <!--start Modal content div-->
+        <div class="modal-content">
+          <h1>Game Over</h1>
+          <h3>you have lost the game</h3>
+          <h3>Correct Guess :</h3>
+          <h3 id="correctWord"></h3>
+
+          <br>
+          <br>
+          <!--home-->
+          <button class="modalButton" id="homeId3" onclick="gotoHomePage()"><h3>Home</h3></button>
+          <!--play again -->
+          <button class="modalButton" id="playAgainId4" onclick="playAgain()"><h3>Play Again</h3></button> 
+          
+        </div>
+        <!--end Modal content div-->
+      
+    </div>
+    <!--end of the game over modal div-->
+
+
+<!--linking javascript page -->
+<script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    
+<!-- my css file linking-->
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!--canvas div start-->
+
+    <canvas id="myCanvasFirst"  >
+        Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+<!--canvas div end-->
+
+    <div class="HangmanDiv "  id="homedivid" >
+        <br><br><br>
+        <h1>HANG-MAN</h1>
+        <br><br><br>
+    <button id="playbuttonid"> <h2>Play</h2></button>    <!--play button-->
+
+    </div>
+    
+
+<script>
+        //action on clicking play button
+    document.getElementById("playbuttonid").addEventListener('click',function(){
+        window.location.href = "game.html";
+        });
+
+    //this is for the canvas action
+    const canvas = document.getElementById("myCanvasFirst")
+    var ctx = canvas.getContext("2d")
+    ctx.beginPath();
+    //upper line (1)
+    ctx.moveTo(20, 25);
+    ctx.lineTo(250, 25);
+    //line between upper and the circle (2)
+    ctx.moveTo(145,25);
+    ctx.lineTo(145,45);
+    //circle part (3)
+    ctx.moveTo(160,60)
+    ctx.arc(145,60, 15, 0, 360);
+    //line body (4)
+    ctx.moveTo(145,75);
+    ctx.lineTo(145,115);
+    //left hand (5)
+    ctx.moveTo(145,85);
+    ctx.lineTo(120,100);
+    //right hand (6)
+    ctx.moveTo(145,85);
+    ctx.lineTo(170,100);
+    //left leg (7)
+    ctx.moveTo(145,115);
+    ctx.lineTo(120,130);
+    //right leg(8)
+    ctx.moveTo(145,115);
+    ctx.lineTo(170,130);
+    ctx.closePath();
+    ctx.stroke();
+
+</script>
+</body>
+</html>
